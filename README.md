@@ -1,5 +1,4 @@
-# space-x-website
-GraphQL With React & Apollo
+# space-x-website: GraphQL With React & Apollo
 
 
 ### Setup
@@ -7,8 +6,7 @@ GraphQL With React & Apollo
 2. npm run server
 3. npm run dev
 
-Material
-
+### Material <br/ >
 - https://docs.spacexdata.com/#5fc4c846-c373-43df-a10a-e9faf80a8b0a
 - https://www.apollographql.com/docs/react/essentials/get-started
 - https://medium.com/@baphemot/understanding-cors-18ad6b478e2b
