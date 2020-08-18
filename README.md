@@ -1,8 +1,11 @@
 # space-x-website
 GraphQL With React & Apollo
 
-- npm run server : http://localhost:5000/graphql
-- npm run dev : http://localhost:3000/
+
+### Setup
+1. cd into directory
+2. npm run server
+3. npm run dev
 
 Material
 
