@@ -1,12 +1,3 @@
-/*
-Info:
-1. https://www.youtube.com/watch?v=SEMTj8w04Z8&list=PLillGF-RfqbZrjw48EXLdM4dsOhURCLZx
-   https://www.youtube.com/watch?v=-XwkFm5a9lw&t=14s
-2. https://github.com/graphql/express-graphql
-3. cli: npm run server
-4. https://www.apollographql.com/docs/react/essentials/get-started (APOLLO)
-*/
-
 const {
   GraphQLObjectType,
   GraphQLInt,
@@ -45,15 +36,18 @@ const RocketType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType ({
   name: 'RootQueryType',
   fields: {
-    launches: {                       //GET a list an array of launches
+    //GET a list an array of launches
+    launches: {
       type: new GraphQLList(LaunchType),
-      resolve(parent, args) {      // inside the resolve object is where we access the data
+      // inside the resolve object is where we access the data
+      resolve(parent, args) {
           return axios
           .get('https://api.spacexdata.com/v3/launches')
           .then(res => res.data);
           }
       },
-      launch: {                    //GET a launch within an array ofmlaunch
+      //GET a launch within an array ofmlaunch
+      launch: {        
         type: LaunchType,
         args: {
           flight_number: { type: GraphQLInt }
