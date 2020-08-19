@@ -1,4 +1,4 @@
-# space-x-website: GraphQL With React & Apollo
+<title>space-x-website: GraphQL With React & Apollo</title>
 
 in this project ill be building a small react app, with the SpaceX data/api. The frameworks ill be using are; GraphQL, Express, React and Apollo.
 
