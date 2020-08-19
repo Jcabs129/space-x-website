@@ -2,7 +2,7 @@
 
 
 ### Setup
-1. cd into directory
+1. cd into directory (master)
 2. npm run server
 3. npm run dev
 
