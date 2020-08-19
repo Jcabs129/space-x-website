@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 const {
   GraphQLObjectType,
   GraphQLInt,
@@ -6,8 +8,6 @@ const {
   GraphQLList,
   GraphQLSchema
 } = require('graphql');
-
-const axios = require('axios');
 
 // Launch type
 const LaunchType = new GraphQLObjectType({
@@ -42,8 +42,8 @@ const RootQuery = new GraphQLObjectType ({
       // inside the resolve object is where we access the data
       resolve(parent, args) {
           return axios
-          .get('https://api.spacexdata.com/v3/launches')
-          .then(res => res.data);
+            .get('https://api.spacexdata.com/v3/launches')
+            .then(res => res.data);
           }
       },
       //GET a launch within an array ofmlaunch
@@ -54,8 +54,8 @@ const RootQuery = new GraphQLObjectType ({
         },
         resolve(parent, args) {
           return axios
-          .get(`https://api.spacexdata.com/v3/launches/${args.flight_number}`)
-          .then(res => res.data);
+            .get(`https://api.spacexdata.com/v3/launches/${args.flight_number}`)
+            .then(res => res.data);
         }
       },
 
